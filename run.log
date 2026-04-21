@@ -1,0 +1,46 @@
+INFO:root:Job started
+ERROR:root:[Errno 2] No such file or directory: 'data.csv'
+INFO:root:Job started
+ERROR:root:'utf-8' codec can't decode byte 0x94 in position 12: invalid start byte
+INFO:root:Job started
+ERROR:root:'utf-8' codec can't decode byte 0x94 in position 12: invalid start byte
+2026-04-21 16:52:24,513 - INFO - Job started
+2026-04-21 16:52:24,520 - INFO - Config loaded: {'seed': 42, 'window': 5, 'version': 'v1'}
+2026-04-21 16:52:24,558 - ERROR - Error: Could not parse input file as CSV or Excel: No module named 'openpyxl'
+Traceback (most recent call last):
+  File "/app/run.py", line 38, in load_input_file
+    import openpyxl
+ModuleNotFoundError: No module named 'openpyxl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/run.py", line 98, in main
+    df = load_input_file(args.input)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/run.py", line 57, in load_input_file
+    raise ValueError(f"Could not parse input file as CSV or Excel: {e}")
+ValueError: Could not parse input file as CSV or Excel: No module named 'openpyxl'
+2026-04-21 16:52:44,707 - INFO - Job started
+2026-04-21 16:52:44,716 - INFO - Config loaded: {'seed': 42, 'window': 5, 'version': 'v1'}
+2026-04-21 16:52:44,756 - ERROR - Error: Could not parse input file as CSV or Excel: No module named 'openpyxl'
+Traceback (most recent call last):
+  File "/app/run.py", line 38, in load_input_file
+    import openpyxl
+ModuleNotFoundError: No module named 'openpyxl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/run.py", line 98, in main
+    df = load_input_file(args.input)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/run.py", line 57, in load_input_file
+    raise ValueError(f"Could not parse input file as CSV or Excel: {e}")
+ValueError: Could not parse input file as CSV or Excel: No module named 'openpyxl'
+2026-04-21 16:54:07,494 - INFO - Job started
+2026-04-21 16:54:07,500 - INFO - Config loaded: {'seed': 42, 'window': 10, 'version': 'v1'}
+2026-04-21 16:54:07,773 - INFO - File loaded, raw shape: (10000, 7), columns: ['timestamp', 'open', 'high', 'low', 'close', 'volume_btc', 'volume_usd']
+2026-04-21 16:54:07,776 - INFO - Rows after cleaning: 10000
+2026-04-21 16:54:07,782 - INFO - Metrics: {'version': 'v1', 'rows_processed': 10000, 'metric': 'signal_rate', 'value': 0.4978, 'latency_ms': 283, 'seed': 42, 'window': 10, 'status': 'success'}
+2026-04-21 16:54:07,782 - INFO - Job completed successfully
